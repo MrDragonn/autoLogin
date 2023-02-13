@@ -15,5 +15,4 @@ jobs:
           node-version: 14
      # 运行脚本
       - name: 运行脚本
-        run: 
-        node app.js
+        run: node app.js
