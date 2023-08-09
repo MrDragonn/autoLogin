@@ -18,19 +18,18 @@ console.log(name, stdout);
 //commonRequest(`王者营地`,`curl -H "Host: kohcamp.qq.com" -H "accept: */*" -H "sec-fetch-site: same-site" -H "access-control-request-method: POST" -H "sec-fetch-mode: cors" -H "accept-language: zh-CN,zh-Hans;q=0.9" -H "origin: https://camp.qq.com" -H "access-control-request-headers: accept-encrypt,algorithm,appid,areaid,camproleid,cclientversionname,content-type,csystem,encode,gameid,gameopenid,h5get,msdkencodeparam,msdktoken,noencrypt,openid,roleid,serverid,sig,source,timestamp,userid,version,x-client-proto" -H "user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;GameHelper;smobagamehelper,iphoneX" -H "referer: https://camp.qq.com/" -H "sec-fetch-dest: empty" --data-binary "" -X OPTIONS --compressed "https://kohcamp.qq.com/operation/action/signin"`)
 //阿里云盘
 //commonRequest(`阿里云`，`curl -H "Host: member.aliyundrive.com" -H "Cookie: isg=BDc32nGLH96WnptIcE7Bj2kJzC-B_Ate4K0p7YnkU4ZtOFd6kcybrvUKHB5my-PW; _nk_=t-2216291909665-52; _tb_token_=e3e761ae46335; cookie2=248691d19183dd71cf97c5c8c45b9918; csg=8bd6ac77; munb=2216291909665; t=279cd013c8ec3a0027ea891ba1f7fbe8; cna=3vZQHdcwR0gCAXwO4QXDxk0r" -H "content-type: application/json; charset=UTF-8" -H "authorization: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ODBlYmIyMGU0NjI0MjhiYjQ4Nzk2YmQ0YmNkZjUyMiIsImN1c3RvbUpzb24iOiJ7XCJjbGllbnRJZFwiOlwicEpaSW5OSE4yZFpXazhxZ1wiLFwiZG9tYWluSWRcIjpcImJqMjlcIixcInNjb3BlXCI6W1wiRFJJVkUuQUxMXCIsXCJGSUxFLkFMTFwiLFwiVklFVy5BTExcIixcIlNIQVJFLkFMTFwiLFwiU1RPUkFHRS5BTExcIixcIlNUT1JBR0VGSUxFLkxJU1RcIixcIlVTRVIuQUxMXCIsXCJCQVRDSFwiLFwiQUNDT1VOVC5BTExcIixcIklNQUdFLkFMTFwiLFwiSU5WSVRFLkFMTFwiLFwiU1lOQ01BUFBJTkcuTElTVFwiXSxcInJvbGVcIjpcInVzZXJcIixcInJlZlwiOlwiXCIsXCJkZXZpY2VfaWRcIjpcImNjYmVjOTdjMTU2MzQ2NmFhMmFmMTc3NzM4Njc1YzU0XCJ9IiwiZXhwIjoxNjkxMzc3NDY3LCJpYXQiOjE2OTEzNzAyMDd9.nqlJgB0SLLiNZFUc-6orS6LPuSXGNcnHdHhL10nc-1ZOppG6nxc3MRtro-E9ujOByTPaKz3fE18PpVN1kpaL-QN30uZ-uVr3SYehIcziEZGorwJVpxxCIZhILL8JvR-QpGSYnbKRlIoqbnTxRMdjTa2M1TYu_Bffl9EWLSbYH7o" -H "accept: */*" -H "x-signature: a679803d6f81c70b73d6eaae464fd0df37439e2ae221a54127d4c7cef6883d9f507e28c4b4687b29d4e5f80fbae134f309b10760f4bb1391a83336cf9cb1091d00" -H "x-umt: 5TQBvD9LPICWRBKJzWUDwIa9hjFoUyu0" -H "x-sign: izK9q4002xAALMX/KblRfkZPjuJxjMX8yOxJWo81ALx55uXkBrh2On9r9NReroMW3NXm1NZxs6RG/gGQlcWBuxfLF1zF7MX8xezF/M" -H "x-canary: client=web,app=other,version=v0.1.0" -H "x-sgext: JAdTrj4fYCBqwFYH5sRnS65mnmKNa51hn3CZYo1wn2WXYp1knmGYZY1jnmGYY55jnmOeY55jnmOecJ5wnnCeY41jnmOecJ5wnnCecJ5wnnCecJ5wnnCeY55jng==" -H "accept-language: zh-CN,zh-Hans;q=0.9" -H "x-mini-wua: iFgT2qEZqXON2VjVwpqB22VCN/jAsXuHcOXMSIr9I2uR9fEyLD76jWZdSm0XKnEM1FkRSjQqpgYpALvIvJMT5poyjwm2nJlBtX+bRqaa9LjpFTQBAxexCd86cO4BBowwx3aPublL6F4rOTCym3p8WORp+FH9Ri1W1Pv48YAPWYuGy4w==" -H "user-agent: AliApp(AYSD/4.9.1) com.alicloud.smartdrive/4.9.1 Version/16.6 Channel/201200 Language/zh-Hans-CN /iOS Mobile/iPhone13,2" -H "x-device-id: yWYB/4xLPC/bcBKJtQNLn1D5MntzC+M8" -H "referer: https://aliyundrive.com/" --data-binary "{\"signInDay\":\"114\"}" --compressed "https://member.aliyundrive.com/v2/activity/sign_in_task_reward?_rx-s=mobile"`)
-axios(
-  
-   method: "POST",
-      url: "https://api.m.jd.com/client.action",
-        params: {
+axios.post(
+ "https://api.m.jd.com/client.action",
+       {
             "functionId": "signBeanAct",
             "appid": "ld",
             "client": "apple",
            
         },
+  {
 headers: {
     Cookie: 'pt_key=app_openAAJk00Y3ADDEK4sZn_dBws3IomaxSbITSP1Xq_cJxnSwIYc5YfZGfUdH1njEa2sfAxgpZq9hMs0;pt_pin=118134207-196382'
-  }
+  }}
 ).then(res=>{
   console.log(res);
 })
